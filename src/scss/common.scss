@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  touch-action: manipulation;
+  // scrollbar-color: $P1 var(--secondary-button-bg);
+  // scrollbar-width: thin;
+  // ::-webkit-scrollbar {
+  //   width: 2px;
+  //   border-radius: 1px;
+  //   min-width: 2px;
+  //   background: var(--secondary-button-bg);
+  //   height: 2px;
+  // }
+  // ::-webkit-scrollbar-thumb {
+  //   width: 2px;
+  //   border-radius: 1px;
+  //   min-width: 2px;
+  //   background: $P1;
+  // }
+  // ::-webkit-scrollbar-track {
+  //   background: var(--secondary-button-bg);
+  // }
+}
+
+body,
+input,
+a,
+button,
+textarea {
+  font-family: $base-font;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  line-height: 1;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+code,
+pre {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+// fontsninja-text {
+//   border: none;
+// }
+
+a:hover,
+.uk-link:hover,
+.uk-link-toggle:hover .uk-link,
+.uk-link-toggle:focus .uk-link {
+  color: white;
+  text-decoration: none;
+}
+
+.uk-slidenav-previous>svg:nth-of-type(2), .uk-slidenav-next>svg:nth-of-type(2) {
+  display: none;
+}
+
+.hidden-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Opera and Firefox */
+}
+
+.rotate-icon {
+  transform: rotateX(180deg);
+}
+.title {
+  font-family: $sec-font;
+  font-size: $H36;
+  font-weight: bold;
+  text-align: center;
+  color: $ND4;
+  margin-bottom: 32px;
+  text-shadow: 0px 1px 0 $NL2;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: $base-font;
+  font-size: $H14;
+  text-align: center;
+  color: $ND9;
+  margin-bottom: 25px;
+}
+
+.dot-with-lines {
+  position: relative;
+  background-color: $R1;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin-bottom: 67px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: $ND9;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 22px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 2px;
+    background-color: $ND9;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22px;
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  border-radius: 2px;
+  min-width: 225px;
+  padding: 22px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: $H14;
+  font-family: $base-font;
+  font-weight: bold;
+  color: $NL2;
+  text-decoration: none;
+  max-width: 225px;
+  box-shadow: 0px 2px 4.8px 0.3px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease-in-out;
+}
+
+.description__item {
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description__item:hover .description__icon-border {
+  transform: rotate(45deg);
+  border: 1px solid rgba($color: $R1, $alpha: 1);
+}
+.description__item:hover .description__title {
+  color: $R1;
+}
+.description__item:not(:last-child) {
+  margin-right: 56px;
+}
+.description__icon-wrapper {
+  margin-bottom: 30px;
+  position: relative;
+}
+.description__icon-border {
+  border: 1px solid rgba($color: $ND5, $alpha: 0.25);
+  border-radius: 1.8px;
+  width: 73px;
+  height: 73px;
+  transition: all 0.2s ease-in-out;
+}
+.description__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.description__title {
+  font-family: $base-font;
+  font-weight: 600;
+  letter-spacing: 1.35px;
+  font-size: $H18;
+  color: $ND4;
+  margin-bottom: 38px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+.description__title::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 41px;
+  background-color: $ND4;
+  left: 50%;
+  top: 36px;
+  transform: translateX(-50%);
+}
+.description__text {
+  font-family: $sec-font;
+  font-weight: 300;
+  font-size: $H12;
+  letter-spacing: 0.9px;
+  text-align: center;
+  color: $ND5;
+}
